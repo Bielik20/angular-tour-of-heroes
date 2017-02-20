@@ -1,9 +1,16 @@
-# AngularTourOfHeroes
+# Angular Tour Of Heroes
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
+It is based on [Tour Of Heroes (tutorial)](https://angular.io/docs/ts/latest/tutorial/) 
+and done using [angular-cli](https://github.com/angular/angular-cli) 
+supported by information included in [Angular 2 Tutorial](https://www.sitepoint.com/angular-2-tutorial/) 
+and [The Ultimate Angular CLI Reference Guide](https://www.sitepoint.com/ultimate-angular-cli-reference/?utm_source=sitepoint&utm_medium=relatedinline&utm_term=&utm_campaign=relatedauthor)
+
+Working version can be found [here](https://bielik20.github.io/angular-tour-of-heroes/)
+
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng servne` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
