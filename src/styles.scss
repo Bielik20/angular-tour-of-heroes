@@ -21,3 +21,11 @@ body, input[text], button {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+$test: #fffaaa;
+@import "/app/app.component";
+@import "/app/quests/quests.component";
+@import "/app/dashboard/dashboard.component";
+@import "/app/hero-detail/hero-detail.component";
+@import "/app/hero-search/hero-search.component";
+@import "/app/heroes/heroes.component";

@@ -7,7 +7,6 @@ import { QuestService } from '../quest.service';
 @Component({
   selector: 'my-quests',
   templateUrl: './quests.component.html',
-  styleUrls: ['./quests.component.css']
 })
 
 export class QuestsComponent implements OnInit {
