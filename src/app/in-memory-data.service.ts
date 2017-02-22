@@ -14,6 +14,12 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 19, name: 'Magma'},
       {id: 20, name: 'Tornado'}
     ];
-    return {heroes};
+    let quests = [
+      {id: 1, hero_id: 12, title: 'First quest', completed: true},
+      {id: 2, hero_id: 12, title: 'Second quest', completed: false},
+      {id: 3, hero_id: 11, title: 'In memory', completed: false},
+      {id: 4, hero_id: 18, title: 'Let the sky', completed: false},
+    ];
+    return {heroes, quests};
   }
 }
