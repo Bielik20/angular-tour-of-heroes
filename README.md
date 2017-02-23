@@ -7,21 +7,98 @@ and [The Ultimate Angular CLI Reference Guide](https://www.sitepoint.com/ultimat
 
 Working version can be found [here](https://bielik20.github.io/angular-tour-of-heroes/)
 
-## Added SASS support
+## Add SASS support
 
-In project I use SCSS instead of CSS. It was accomplished by changing 'angular-cli.json'.
+In project I use SCSS instead of CSS. It was accomplished by changing "angular-cli.json":
+```json
+"styles": [
+    "styles.scss" //was "style.css"
+],
+```
+```json
+"styleExt": "scss", //was "css"
+```
 
-Main file is in 'src/styles.scss' where I include every other scss file.
+Main file is in "src/styles.scss" where I include every other scss file.
 I don't longer include css/scss in Component.ts as they depend on previous files (eg. variables.scss).
 
-## Added VS Code debug support
+## Add VS Code debug support
 
-File responsible for debugging is '.vscode/launch.json'. 
-Only the first configuration seems to work.
+File responsible for debugging is ".vscode/launch.json":
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome against localhost, with sourcemaps",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:4200",
+      // This forces chrome to run a brand new instance, allowing existing
+      // chrome windows to stay open.
+      "userDataDir": "${workspaceRoot}/.vscode/chrome",
+      "sourceMaps": true,
+      "webRoot": "${workspaceRoot}",
+      "diagnosticLogging": true,
+      "sourceMapPathOverrides": {
+        "webpack:///./*": "${webRoot}/*"
+      }
+    },
+    ]
+}
+```
+
+More information about configuration can be found [here](https://go.microsoft.com/fwlink/?linkid=830387).
 To start debugging:
 - First start 'ng serve'
 - Then start debug (F5).
 - It will open a new window where breakpoints work.
+
+## Add Bootstrap-SASS
+
+To add necessary dependecies:
+```
+npm install jquery --save
+npm install --save bootstrap-sass ng2-bootstrap
+```
+
+In a root folder add file called "webpack.config.js":
+```javascript
+rules: [
+    {
+        test: /\.(woff2?|ttf|eot|svg)$/,
+        loader: 'url-loader?limit=10000'
+    },
+]
+```
+
+In "angular-cli.json":
+```json
+"scripts": [
+    "../node_modules/jquery/dist/jquery.min.js",
+    "../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"
+],
+```
+
+In "style.scss" add at the top:
+```scss
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+```
+
+In "app.module.ts" add:
+
+```typescript
+import { AlertModule, DatepickerModule } from 'ng2-bootstrap';
+
+...
+
+imports: [
+    ...
+    AlertModule.forRoot(),
+    DatepickerModule.forRoot(),
+],
+```
 
 # Beyond Tour of Heroes
 

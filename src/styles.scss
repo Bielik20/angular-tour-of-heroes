@@ -23,6 +23,8 @@ body, input[text], button {
 }
 
 $test: #fffaaa;
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "/app/app.component";
 @import "/app/quests/quests.component";
 @import "/app/dashboard/dashboard.component";
