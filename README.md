@@ -1,13 +1,40 @@
 # Angular Tour Of Heroes
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
-
 It is based on [Tour Of Heroes (tutorial)](https://angular.io/docs/ts/latest/tutorial/) 
 and done using [angular-cli](https://github.com/angular/angular-cli) 
 supported by information included in [Angular 2 Tutorial](https://www.sitepoint.com/angular-2-tutorial/) 
 and [The Ultimate Angular CLI Reference Guide](https://www.sitepoint.com/ultimate-angular-cli-reference/?utm_source=sitepoint&utm_medium=relatedinline&utm_term=&utm_campaign=relatedauthor)
 
 Working version can be found [here](https://bielik20.github.io/angular-tour-of-heroes/)
+
+## Added SASS support
+
+In project I use SCSS instead of CSS. It was accomplished by changing 'angular-cli.json'.
+
+Main file is in 'src/styles.scss' where I include every other scss file.
+I don't longer include css/scss in Component.ts as they depend on previous files (eg. variables.scss).
+
+## Added VS Code debug support
+
+File responsible for debugging is '.vscode/launch.json'. 
+Only the first configuration seems to work.
+To start debugging:
+- First start 'ng serve'
+- Then start debug (F5).
+- It will open a new window where breakpoints work.
+
+# Beyond Tour of Heroes
+
+I started to expand beyond what is in original tutorial. Things that are added:
+
+## Quests
+
+New model and view containing quests.
+
+# CLI Generated
+
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
+
 
 ## Development server
 Run `ng servne` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
