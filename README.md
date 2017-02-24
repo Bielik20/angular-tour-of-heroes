@@ -19,8 +19,14 @@ In project I use SCSS instead of CSS. It was accomplished by changing "angular-c
 "styleExt": "scss", //was "css"
 ```
 
-Main file is in "src/styles.scss" where I include every other scss file.
+Main file is in "src/styles.scss" where I include all scss files.
 I don't longer include css/scss in Component.ts as they depend on previous files (eg. variables.scss).
+
+To keep functionality of seperated styles I include them in "src/styles.scss" in that manner:
+```scss
+my-dashboard { @import "/app/dashboard/dashboard.component"; }
+```
+Where "my-dashboard" is a name of component's selector.
 
 ## Add VS Code debug support
 

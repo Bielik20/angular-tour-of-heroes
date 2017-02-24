@@ -1,14 +1,18 @@
+.result-box {
+  position:absolute;
+  z-index: 1000;
+}
+
 .search-result{
-  border-bottom: 1px solid gray;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  width:195px;
-  height: 20px;
-  padding: 5px;
+  width:170px;
+  height: 25px;
+  padding: 3px 12px;
+  margin: 1px 0px 1px 1px;
   background-color: white;
   cursor: pointer;
+  box-shadow: $small-shadow;
 }
-#search-box{
-  width: 200px;
-  height: 20px;
+
+hero-search .form-group {
+  margin: 0px !important;
 }

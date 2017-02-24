@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Router } from '@angular/router'
 
 import { Quest } from '../quest';
@@ -9,7 +9,7 @@ import { QuestService } from '../quest.service';
   templateUrl: './quests.component.html',
 })
 
-export class QuestsComponent implements OnInit {
+export class QuestsComponent implements OnInit, OnChanges {
 
   @Input()
   hero_id?: number;
@@ -18,9 +18,12 @@ export class QuestsComponent implements OnInit {
   constructor(private questService: QuestService) { }
 
   ngOnInit() {
-    if(this.hero_id == null)
+    if (this.hero_id == null)
       this.getQuests();
-    else
+  }
+
+  ngOnChanges() {
+    if (this.hero_id != null)
       this.getOwnedByHero(this.hero_id);
   }
 

@@ -1,9 +1,24 @@
-<h1>
-    {{title}}</h1>
-<nav>
-    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-    <a routerLink="/quests" routerLinkActive="active">Quests</a>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">{{title}}</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+                <li><a routerLink="/heroes" routerLinkActive="active">Heroes</a></li>
+                <li><a routerLink="/quests" routerLinkActive="active">Quests</a></li>
+            </ul>
+            <hero-search></hero-search>
+        </div>
+    </div>
 </nav>
 
-<router-outlet></router-outlet>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

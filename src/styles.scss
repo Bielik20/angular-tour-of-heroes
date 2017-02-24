@@ -22,12 +22,15 @@ body, input[text], button {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-$test: #fffaaa;
+
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "variables";
 @import "/app/app.component";
-@import "/app/quests/quests.component";
-@import "/app/dashboard/dashboard.component";
-@import "/app/hero-detail/hero-detail.component";
-@import "/app/hero-search/hero-search.component";
-@import "/app/heroes/heroes.component";
+
+my-dashboard { @import "/app/dashboard/dashboard.component"; }
+my-hero-detail { @import "/app/hero-detail/hero-detail.component"; }
+hero-search { @import "/app/hero-search/hero-search.component"; }
+my-heroes { @import "/app/heroes/heroes.component"; }
+my-quests { @import "/app/quests/quests.component"; }
