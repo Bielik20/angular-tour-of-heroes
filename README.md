@@ -7,6 +7,27 @@ and [The Ultimate Angular CLI Reference Guide](https://www.sitepoint.com/ultimat
 
 Working version can be found [here](https://bielik20.github.io/angular-tour-of-heroes/)
 
+## Prerequisites
+
+- node v7.4.0
+- npm v4.0.5
+- ng v1.0.0-beta-28.3
+
+To manage different node versions use [nvm](https://github.com/creationix/nvm)
+
+npm version can be updated with command: 
+```
+npm install npm@<version> -g
+npm install npm@latest -g (for latest version)
+```
+
+ng can be updated using:
+```
+npm uninstall -g angular-cli
+npm cache clean
+npm install -g @angular/cli@<version>
+```
+
 ## Add SASS support
 
 In project I use SCSS instead of CSS. It was accomplished by changing "angular-cli.json":
