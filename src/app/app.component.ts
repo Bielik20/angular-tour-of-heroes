@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesComponent } from './heroes/heroes.component';
 
 @Component({
   moduleId: module.id,
