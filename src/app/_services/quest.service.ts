@@ -3,7 +3,7 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Quest } from './quest';
+import { Quest } from '../_models/quest';
 
 @Injectable()
 export class QuestService {

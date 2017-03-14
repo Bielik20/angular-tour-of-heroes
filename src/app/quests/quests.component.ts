@@ -1,8 +1,8 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Router } from '@angular/router'
 
-import { Quest } from '../quest';
-import { QuestService } from '../quest.service';
+import { Quest } from '../_models/quest';
+import { QuestService } from '../_services/quest.service';
 
 @Component({
   selector: 'my-quests',
