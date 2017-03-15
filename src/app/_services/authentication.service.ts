@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AuthenticationService {
+    onLogin = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')));
 
     constructor(private http: Http) { }
 
@@ -16,6 +18,7 @@ export class AuthenticationService {
                 if (user && user.token) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify(user));
+                    this.onLogin.next(user);
                 }
             });
     }
@@ -23,5 +26,6 @@ export class AuthenticationService {
     logout() {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
+        this.onLogin.next(JSON.parse(localStorage.getItem('currentUser')));
     }
 }

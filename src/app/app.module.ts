@@ -31,6 +31,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginStatusComponent } from './_directives/login-status.component';
 
 @NgModule({
   declarations: [
@@ -43,12 +44,16 @@ import { RegisterComponent } from './register/register.component';
     QuestsComponent,
     LoginComponent,
     RegisterComponent,
+    LoginStatusComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    
+    // loading & configuring the in-memory web api
     InMemoryWebApiModule.forRoot(InMemoryDataService),
+
     AppRoutingModule,
     AlertModule.forRoot(),
     DatepickerModule.forRoot(),
