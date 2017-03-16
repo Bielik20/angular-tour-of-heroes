@@ -22,7 +22,7 @@ import { HeroService } from './_services/hero.service';
 import { QuestService } from './_services/quest.service';
 import { UserService } from './_services/user.service';
 
-import { AlertComponent } from './_directives/alert.component'
+import { MyAlertComponent } from './_directives/my-alert.component'
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { QuestsComponent } from './quests/quests.component';
 import { AppComponent } from './app.component';
@@ -36,7 +36,7 @@ import { LoginStatusComponent } from './_directives/login-status.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AlertComponent,
+    MyAlertComponent,
     DashboardComponent,
     HeroDetailComponent,
     HeroesComponent,

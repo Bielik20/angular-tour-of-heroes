@@ -14,11 +14,7 @@ export class LoginStatusComponent {
     constructor(private authenticationService: AuthenticationService) { }
 
     ngOnInit() {
-        // this.authenticationService.getMessage().subscribe(userIsLogged => { this.userIsLogged = userIsLogged; });
-        this.authenticationService.onLogin.subscribe(user => this.test(user));
-    }
-
-    test(user) {
-        this.loggedUser = user;
+        this.loggedUser = JSON.parse(localStorage.getItem('currentUser'));
+        this.authenticationService.onStatusChange().subscribe(user => this.loggedUser = user);
     }
 }

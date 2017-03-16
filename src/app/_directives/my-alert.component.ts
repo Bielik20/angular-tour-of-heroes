@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AlertService } from '../_services/alert.service';
 
 @Component({
     moduleId: module.id,
     selector: 'my-alert',
-    templateUrl: 'alert.component.html'
+    templateUrl: 'my-alert.component.html'
 })
 
-export class AlertComponent {
+export class MyAlertComponent {
     message: any;
 
     constructor(private alertService: AlertService) { }

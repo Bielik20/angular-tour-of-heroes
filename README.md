@@ -15,6 +15,12 @@ Working version can be found [here](https://bielik20.github.io/angular-tour-of-h
 
 To manage different node versions use [nvm](https://github.com/creationix/nvm)
 
+On clean system install nvm and:
+```
+nvm install 7.4.0
+npm install -g angular-cli
+```
+
 npm version can be updated with command: 
 ```
 npm install npm@<version> -g
@@ -25,7 +31,7 @@ ng can be updated using:
 ```
 npm uninstall -g angular-cli
 npm cache clean
-npm install -g @angular/cli@<version>
+npm install -g angular-cli
 ```
 
 ## Add SASS support
@@ -127,13 +133,36 @@ imports: [
 ],
 ```
 
-# Beyond Tour of Heroes
+## Alert
 
-I started to expand beyond what is in original tutorial. Things that are added:
+Global alert for displaying messages has been implemented. Example of usage is in "login.component.ts".
 
-## Quests
+Component:
+- MyAlert
 
-New model and view containing quests.
+Service:
+- MyService
+
+Selector is included in "app.component.html"
+
+## Add Authorization
+
+Authorization has been added based on [this tutorial](http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial). It uses fake backend and asumes server uses [jwt](https://jwt.io/).
+
+Authorization cosists of following modules:
+- login
+- register
+- login status
+
+Following services:
+- authentication
+- user
+
+Model:
+- user
+
+Helper:
+- fake-backend
 
 # CLI Generated
 
