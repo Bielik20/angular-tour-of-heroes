@@ -32,6 +32,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginStatusComponent } from './_directives/login-status.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { LoginStatusComponent } from './_directives/login-status.component';
     LoginComponent,
     RegisterComponent,
     LoginStatusComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@ To manage different node versions use [nvm](https://github.com/creationix/nvm)
 On clean system install nvm and:
 ```
 nvm install 7.4.0
+nvm use 7.4.0
 npm install -g angular-cli
 ```
 
