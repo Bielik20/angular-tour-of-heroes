@@ -9,17 +9,17 @@ Working version can be found [here](https://bielik20.github.io/angular-tour-of-h
 
 ## Prerequisites
 
-- node v7.4.0
-- npm v4.0.5
-- ng v1.0.0-beta-28.3
+- node v7.7.3
+- npm v4.1.2
+- ng v1.0.0-rc.4
 
 To manage different node versions use [nvm](https://github.com/creationix/nvm)
 
 On clean system install nvm and:
 ```
-nvm install 7.4.0
-nvm use 7.4.0
-npm install -g angular-cli
+nvm install 7.7.3
+nvm use 7.7.3
+npm install -g @angular/cli
 ```
 
 npm version can be updated with command: 
@@ -30,9 +30,10 @@ npm install npm@latest -g (for latest version)
 
 ng can be updated using:
 ```
-npm uninstall -g angular-cli
+npm uninstall -g angular-cli    //depends on installed version
+npm uninstall -g @angular/cli   //depends on installed version
 npm cache clean
-npm install -g angular-cli
+npm install -g @angular/cli@<version>
 ```
 
 ## Add SASS support
@@ -167,11 +168,11 @@ Helper:
 
 # CLI Generated
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
-
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.4.
 
 ## Development server
-Run `ng servne` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -190,10 +191,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
-## Deploying to GitHub Pages
-
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
-
 ## Further help
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

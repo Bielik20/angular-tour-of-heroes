@@ -1,6 +1,6 @@
 import { AngularTourOfHeroesPage } from './app.po';
 
-describe('angular-tour-of-heroes App', function() {
+describe('angular-tour-of-heroes App', () => {
   let page: AngularTourOfHeroesPage;
 
   beforeEach(() => {
